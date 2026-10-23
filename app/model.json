@@ -1,0 +1,13 @@
+{
+  "version": "synthetic-logistic-v1",
+  "description": "Interpretable logistic scoring model with manually selected coefficients for synthetic telemetry; not trained on real failure events",
+  "horizon": "simulated 24-hour failure risk",
+  "intercept": -3.15,
+  "weights": {
+    "temperature": 0.78,
+    "vibration": 1.12,
+    "pressure_deviation": 0.42,
+    "current": 0.52,
+    "rpm_deviation": 0.40
+  }
+}

@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#0b111b" />
+  <meta name="description" content="PulseCore — industrial IoT predictive maintenance monitoring and equipment health dashboard." />
+  <title>PulseCore — Industrial Intelligence</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" aria-label="Main navigation">
+      <a class="brand" href="#overview" aria-label="PulseCore home">
+        <span class="brand-icon"><svg width="28" height="28" viewBox="0 0 28 28" fill="none"><path d="M3 15h5l3-8 5 15 3-7h6" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+        <span class="brand-copy"><strong>PULSE<span>CORE</span></strong><small>INDUSTRIAL INTELLIGENCE</small></span>
+      </a>
+      <div class="workspace-label">WORKSPACE <span>01</span></div>
+      <div class="workspace-card"><span class="workspace-glyph">▦</span><div><strong>North Plant</strong><small>Production facility</small></div><span class="chevron">⌄</span></div>
+      <div class="nav-section-label">MONITORING</div>
+      <nav class="nav-list" id="nav">
+        <button class="nav-link active" data-page="overview"><span data-icon="layout"></span>Overview</button>
+        <button class="nav-link" data-page="assets"><span data-icon="cpu"></span>Equipment <span class="nav-count" id="asset-count">12</span></button>
+        <button class="nav-link" data-page="alerts"><span data-icon="bell"></span>Alerts <span class="nav-count alert-count" id="alert-count">5</span></button>
+        <button class="nav-link" data-page="work-orders"><span data-icon="clipboard"></span>Work orders</button>
+      </nav>
+      <div class="nav-section-label nav-section-two">SYSTEM</div>
+      <nav class="nav-list">
+        <button class="nav-link" data-page="analytics"><span data-icon="chart"></span>Analytics</button>
+        <a class="nav-link" href="https://github.com/new" target="_blank" rel="noopener noreferrer"><span data-icon="github"></span>GitHub <span class="external-arrow">↗</span></a>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="sidebar-promo"><div class="promo-mark">✦</div><strong>Intelligence, in motion.</strong><p>From sensor signals to smarter maintenance decisions.</p><span>DEMO ENVIRONMENT ↗</span></div>
+        <div class="operator"><div class="avatar">OP</div><div><strong>Plant operator</strong><small>Administrator · Demo</small></div><span class="operator-ellipsis">···</span></div>
+      </div>
+    </aside>
+
+    <div class="main-shell">
+      <header class="topbar"><div class="breadcrumbs">OPERATIONS <span>/</span> <strong id="breadcrumb">Overview</strong></div>
+        <div class="top-actions"><span class="live-indicator"><span class="pulse-dot"></span> SIMULATOR ACTIVE · DEMO</span><span class="top-separator"></span><span id="clock" class="clock">—</span><button class="icon-button" id="refresh-btn" title="Refresh data" aria-label="Refresh data"><span data-icon="refresh"></span></button><button class="top-avatar" aria-label="Demo operator profile">OP</button></div>
+      </header>
+      <main id="app" tabindex="-1"><div class="loading"><div class="spinner"></div>Loading industrial monitoring data…</div></main>
+      <footer class="footer"><span>© 2026 PulseCore Industrial Intelligence</span><span><span class="footer-dot"></span> All systems operational <span class="muted-dot">·</span> Synthetic demo data <span class="muted-dot">·</span> v1.0.0</span></footer>
+    </div>
+  </div>
+  <div id="toast-area" class="toast-area" aria-live="polite"></div>
+  <div id="modal-root"></div>
+  <script src="demo-api.js" defer></script>
+  <script src="app.js" defer></script>
+</body>
+</html>

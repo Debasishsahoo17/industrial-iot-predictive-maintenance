@@ -1,0 +1,13 @@
+# Optional backend demo deployment. Note: Render's ephemeral filesystem means
+# SQLite mutations can reset on redeploy/restart on the free filesystem.
+services:
+  - type: web
+    name: pulsecore-industrial-iot
+    runtime: python
+    plan: free
+    buildCommand: echo "No third-party dependencies to install"
+    startCommand: HOST=0.0.0.0 python run.py
+    healthCheckPath: /api/health
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.11
